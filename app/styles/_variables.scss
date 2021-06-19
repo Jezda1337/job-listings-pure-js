@@ -1,0 +1,19 @@
+$desktop: 1440px;
+
+@mixin breakpoint($point) {
+  @if $point == "desktop" {
+    @media (max-width: 1440px) {
+      @content;
+    }
+  }
+}
+
+// primary colors
+$darkCyan: hsl(180, 29%, 50%);
+
+// neutral colors
+$lightGrayishCyanBg: hsl(180, 52%, 96%);
+$lightGrayishCyanFT: hsl(180, 31%, 95%);
+$darkGrayishCyan: hsl(180, 8%, 52%);
+$veryDarkGrayishCyan: hsl(180, 14%, 20%);
+$white: #fff;
