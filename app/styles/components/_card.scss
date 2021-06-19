@@ -5,10 +5,23 @@
   box-shadow: 0 3px 10px $darkGrayishCyan;
   position: relative;
   padding: 32px 19px 19px;
+  margin-top: 40px;
 
   &__job-header {
     display: flex;
     align-items: center;
+  }
+
+  &__position {
+    font-size: 15px;
+    font-weight: 700;
+    color: $veryDarkGrayishCyan;
+    margin: 12px 0 17px;
+  }
+
+  &__job-info {
+    padding-bottom: 15px;
+    border-bottom: 1px solid $darkGrayishCyan;
   }
 
   &__tag-new,
@@ -19,8 +32,8 @@
     padding: 8px 9px 7px;
     border-radius: 100px;
     text-align: center;
-    // line-height: 0;
     font-weight: 700;
+    max-height: 24px;
   }
 
   &__tag-new {
@@ -51,6 +64,57 @@
     width: 100%;
     height: 100%;
     display: block;
+  }
+
+  &__position-detail {
+    font-size: 13px;
+    font-weight: 500;
+    color: $darkGrayishCyan;
+  }
+
+  &__position-detail:nth-child(2) {
+    margin: 0 10px;
+    position: relative;
+    &::after,
+    &::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 4px;
+      height: 4px;
+      background-color: $darkGrayishCyan;
+      border-radius: 100px;
+    }
+
+    &::after {
+      right: -10px;
+    }
+    &::before {
+      left: -9px;
+    }
+  }
+
+  &__job-tags {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 5px;
+  }
+
+  &__job-tag {
+    max-height: 32px;
+    font-size: 13px;
+    color: $darkCyan;
+    font-weight: 700;
+    text-decoration: none;
+    padding: 10px 9px 9px;
+    background-color: $lightGrayishCyanFT;
+    margin-top: 16px;
+    display: block;
+  }
+
+  &__job-tag:not(:last-child) {
+    margin-right: 15px;
   }
 }
 

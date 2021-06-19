@@ -13,7 +13,8 @@
   -webkit-box-shadow: 0 3px 10px #7b8e8e;
           box-shadow: 0 3px 10px #7b8e8e;
   position: relative;
-  padding: 32px 19px 19px; }
+  padding: 32px 19px 19px;
+  margin-top: 40px; }
   .card__job-header {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -21,6 +22,14 @@
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center; }
+  .card__position {
+    font-size: 15px;
+    font-weight: 700;
+    color: #2c3a3a;
+    margin: 12px 0 17px; }
+  .card__job-info {
+    padding-bottom: 15px;
+    border-bottom: 1px solid #7b8e8e; }
   .card__tag-new, .card__tag-featured {
     font-size: 11px;
     color: #fff;
@@ -28,7 +37,8 @@
     padding: 8px 9px 7px;
     border-radius: 100px;
     text-align: center;
-    font-weight: 700; }
+    font-weight: 700;
+    max-height: 24px; }
   .card__tag-new {
     background-color: #5ba4a4;
     margin-right: 8px; }
@@ -48,6 +58,46 @@
     width: 100%;
     height: 100%;
     display: block; }
+  .card__position-detail {
+    font-size: 13px;
+    font-weight: 500;
+    color: #7b8e8e; }
+  .card__position-detail:nth-child(2) {
+    margin: 0 10px;
+    position: relative; }
+    .card__position-detail:nth-child(2)::after, .card__position-detail:nth-child(2)::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      -webkit-transform: translateY(-50%);
+              transform: translateY(-50%);
+      width: 4px;
+      height: 4px;
+      background-color: #7b8e8e;
+      border-radius: 100px; }
+    .card__position-detail:nth-child(2)::after {
+      right: -10px; }
+    .card__position-detail:nth-child(2)::before {
+      left: -9px; }
+  .card__job-tags {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    margin-bottom: 5px; }
+  .card__job-tag {
+    max-height: 32px;
+    font-size: 13px;
+    color: #5ba4a4;
+    font-weight: 700;
+    text-decoration: none;
+    padding: 10px 9px 9px;
+    background-color: #eef6f6;
+    margin-top: 16px;
+    display: block; }
+  .card__job-tag:not(:last-child) {
+    margin-right: 15px; }
 
 .card-border::after {
   border-top-left-radius: 5px;
