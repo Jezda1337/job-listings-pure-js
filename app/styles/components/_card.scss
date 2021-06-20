@@ -2,10 +2,18 @@
   max-height: 257px;
   background-color: $white;
   border-radius: 5px;
-  box-shadow: 0 3px 10px $darkGrayishCyan;
+  box-shadow: 0 5px 10px rgba(212, 233, 236, 1); //non of the give colors didn't match so i made one
   position: relative;
   padding: 32px 19px 19px;
-  margin-top: 40px;
+  max-width: 1110px;
+  margin: 40px auto 0;
+
+  @include breakpoint(tablet) {
+    max-height: 152px;
+    display: flex;
+    justify-content: space-between;
+    padding: 32px 19px;
+  }
 
   &__job-header {
     display: flex;
@@ -17,11 +25,27 @@
     font-weight: 700;
     color: $veryDarkGrayishCyan;
     margin: 12px 0 17px;
+
+    @include breakpoint(tablet) {
+      font-size: 18px;
+
+      &:hover {
+        color: $darkCyan;
+        cursor: pointer;
+      }
+    }
   }
 
   &__job-info {
     padding-bottom: 15px;
     border-bottom: 1px solid $darkGrayishCyan;
+
+    @include breakpoint(tablet) {
+      display: flex;
+      flex-direction: row-reverse;
+      border: none;
+      padding: 0;
+    }
   }
 
   &__tag-new,
@@ -50,14 +74,24 @@
     font-weight: 700;
     color: $darkCyan;
     margin-right: 18px;
+
+    @include breakpoint(tablet) {
+      font-size: 14px;
+    }
   }
 
   &__company-logo {
     max-width: 48px;
     max-height: 48px;
-
     position: absolute;
     top: -24px;
+
+    @include breakpoint(tablet) {
+      max-width: 88px;
+      max-height: 88px;
+      position: static;
+      margin: 0 25px 0 21px;
+    }
   }
 
   &__company-logo__img {
@@ -70,6 +104,10 @@
     font-size: 13px;
     font-weight: 500;
     color: $darkGrayishCyan;
+
+    @include breakpoint(tablet) {
+      font-size: 15px;
+    }
   }
 
   &__position-detail:nth-child(2) {
@@ -99,6 +137,13 @@
     display: flex;
     flex-wrap: wrap;
     margin-bottom: 5px;
+
+    @include breakpoint(tablet) {
+      margin: 0;
+      margin-right: 21px;
+      justify-content: center;
+      align-items: center;
+    }
   }
 
   &__job-tag {
@@ -111,6 +156,17 @@
     background-color: $lightGrayishCyanFT;
     margin-top: 16px;
     display: block;
+    border-radius: 5px;
+
+    @include breakpoint(tablet) {
+      margin-top: 0;
+
+      &:hover {
+        cursor: pointer;
+        background-color: $darkCyan;
+        color: $white;
+      }
+    }
   }
 
   &__job-tag:not(:last-child) {

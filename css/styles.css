@@ -1,20 +1,35 @@
 @import url("https://fonts.googleapis.com/css2?family=Spartan:wght@500;700&display=swap");
 .header {
+  position: relative;
+  min-height: 156px;
+  height: 100%;
+  background: url("/images/bg-header-mobile.svg") center center/cover no-repeat;
   background-color: #5ba4a4; }
-  .header__bg-image {
-    width: 100%;
-    height: 100%;
-    display: block; }
+  @media (min-width: 768px) {
+    .header {
+      background: url("/images/bg-header-desktop.svg") center center/cover no-repeat;
+      background-color: #5ba4a4; } }
 
 .card {
   max-height: 257px;
   background-color: #fff;
   border-radius: 5px;
-  -webkit-box-shadow: 0 3px 10px #7b8e8e;
-          box-shadow: 0 3px 10px #7b8e8e;
+  -webkit-box-shadow: 0 5px 10px #d4e9ec;
+          box-shadow: 0 5px 10px #d4e9ec;
   position: relative;
   padding: 32px 19px 19px;
-  margin-top: 40px; }
+  max-width: 1110px;
+  margin: 40px auto 0; }
+  @media (min-width: 768px) {
+    .card {
+      max-height: 152px;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: justify;
+          -ms-flex-pack: justify;
+              justify-content: space-between;
+      padding: 32px 19px; } }
   .card__job-header {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -27,9 +42,26 @@
     font-weight: 700;
     color: #2c3a3a;
     margin: 12px 0 17px; }
+    @media (min-width: 768px) {
+      .card__position {
+        font-size: 18px; }
+        .card__position:hover {
+          color: #5ba4a4;
+          cursor: pointer; } }
   .card__job-info {
     padding-bottom: 15px;
     border-bottom: 1px solid #7b8e8e; }
+    @media (min-width: 768px) {
+      .card__job-info {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: reverse;
+            -ms-flex-direction: row-reverse;
+                flex-direction: row-reverse;
+        border: none;
+        padding: 0; } }
   .card__tag-new, .card__tag-featured {
     font-size: 11px;
     color: #fff;
@@ -49,11 +81,20 @@
     font-weight: 700;
     color: #5ba4a4;
     margin-right: 18px; }
+    @media (min-width: 768px) {
+      .card__company-name {
+        font-size: 14px; } }
   .card__company-logo {
     max-width: 48px;
     max-height: 48px;
     position: absolute;
     top: -24px; }
+    @media (min-width: 768px) {
+      .card__company-logo {
+        max-width: 88px;
+        max-height: 88px;
+        position: static;
+        margin: 0 25px 0 21px; } }
   .card__company-logo__img {
     width: 100%;
     height: 100%;
@@ -62,6 +103,9 @@
     font-size: 13px;
     font-weight: 500;
     color: #7b8e8e; }
+    @media (min-width: 768px) {
+      .card__position-detail {
+        font-size: 15px; } }
   .card__position-detail:nth-child(2) {
     margin: 0 10px;
     position: relative; }
@@ -86,6 +130,16 @@
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
     margin-bottom: 5px; }
+    @media (min-width: 768px) {
+      .card__job-tags {
+        margin: 0;
+        margin-right: 21px;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center; } }
   .card__job-tag {
     max-height: 32px;
     font-size: 13px;
@@ -95,7 +149,15 @@
     padding: 10px 9px 9px;
     background-color: #eef6f6;
     margin-top: 16px;
-    display: block; }
+    display: block;
+    border-radius: 5px; }
+    @media (min-width: 768px) {
+      .card__job-tag {
+        margin-top: 0; }
+        .card__job-tag:hover {
+          cursor: pointer;
+          background-color: #5ba4a4;
+          color: #fff; } }
   .card__job-tag:not(:last-child) {
     margin-right: 15px; }
 
@@ -110,6 +172,33 @@
   content: "";
   background-color: #5ba4a4; }
 
+.search {
+  position: absolute;
+  top: -50px;
+  left: 24px;
+  right: 24px;
+  z-index: 1;
+  max-width: 1110px;
+  margin: inherit;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center; }
+  .search__clear {
+    color: #5ba4a4;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    font-weight: 700; }
+    .search__clear:hover {
+      text-decoration: underline;
+      cursor: pointer; }
+
 * {
   margin: 0;
   padding: 0;
@@ -123,7 +212,13 @@ html {
 
 .main {
   padding: 32px 24px 34px;
-  background-color: #effafa; }
+  background-color: #effafa;
+  position: relative; }
+  @media (min-width: 768px) {
+    .main {
+      max-width: 1440px;
+      width: 100%;
+      margin: 0 auto; } }
 
 .d-none {
   display: none; }

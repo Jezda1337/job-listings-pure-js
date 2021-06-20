@@ -1,0 +1,25 @@
+.search {
+  position: absolute;
+  top: -50px;
+  left: 24px;
+  right: 24px;
+  z-index: 1;
+  max-width: 1110px;
+  margin: inherit;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &__clear {
+    color: $darkCyan;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    font-weight: 700;
+    &:hover {
+      text-decoration: underline;
+      cursor: pointer;
+    }
+  }
+}

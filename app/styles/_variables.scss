@@ -1,8 +1,9 @@
 $desktop: 1440px;
+$tablet: 768px;
 
 @mixin breakpoint($point) {
-  @if $point == "desktop" {
-    @media (max-width: 1440px) {
+  @if $point == "tablet" {
+    @media (min-width: 768px) {
       @content;
     }
   }
